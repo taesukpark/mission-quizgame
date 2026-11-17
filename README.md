@@ -111,6 +111,8 @@ init.defaultbranch=master
 ```
 7-3. 프로그램 실행 결과 스크린샷(퀴즈 추가, 목록, 풀기 및 점수)
 ```
+<img width="380" height="295" alt="image" src="https://github.com/user-attachments/assets/cdc91563-e561-438a-9b93-9f672990919c" />
+
 ```
 PS C:\Users\lucidts1102\mission2> python quizgame.py
 * quizgame.py프로그램실행중 ctrl+C로 빠져나올경우
