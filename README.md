@@ -310,6 +310,7 @@ Receiving objects: 100% (4/4), done.
 ```
 
 ## 8. git commit 10회 이상 하기(커밋 메시지에 변경 요약 포함)
+<img width="1986" height="1587" alt="image" src="https://github.com/user-attachments/assets/7d010110-212a-44de-a850-38c6417400a7" />
 
 ```
 8-1. 메뉴기능 완성 후 git commit 실행하기
