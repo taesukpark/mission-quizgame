@@ -467,26 +467,25 @@ clone과 pull을 각각 1회 이상 사용한 기록이 있다.
 
 ```
 9-1.git clone URL(GitHub 주소) 미션수행 저장소를 clone하여 별도의 로컬 디렉터리에 복제한다.
-
-복제된 저장소에서 간단한 변경(예:README.md에 한 줄 추가)을 하고 commit하고 push한다.
-PS C:\Users\lucidts1102\mission2> git push -u origin main
-info: please complete authentication in your browser...
-To https://github.com/taesukpark/mission-quizgame.git
- ! [rejected]        main -> main (fetch first)
-error: failed to push some refs to 'https://github.com/taesukpark/mission-quizgame.git'
-hint: Updates were rejected because the remote contains work that you do not
-hint: have locally. This is usually caused by another repository pushing to
-hint: the same ref. If you want to integrate the remote changes, use
-hint: 'git pull' before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\lucidts1102\mission2> git clone https://github.com/taesukpark/mission-quizgame.git mission2
+Cloning into 'mission2'...
+remote: Enumerating objects: 22, done.
+remote: Counting objects: 100% (22/22), done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 22 (delta 6), reused 9 (delta 2), pack-reused 0 (from 0)
+Receiving objects: 100% (22/22), 18.35 KiB | 9.17 MiB/s, done.
+Resolving deltas: 100% (6/6), done.
 ```
+```
+9-2. 복제된 저장소에서 간단한 변경(예:README.md에 한 줄 추가)을 하고 commit하고 push한다.
 
 ```
-9-2. 기존 로컬 작업 디렉터리에서 pull로 변경사항을 가져온다.
+```
+9-3. 기존 로컬 작업 디렉터리에서 pull로 변경사항을 가져온다.
 
 ```
 
 ```
-9-3. git pull 받은 내용이 정상적으로 반영되었는지 확인한다.
+9-4. git pull 받은 내용이 정상적으로 반영되었는지 확인한다.
 
 ```
