@@ -110,7 +110,8 @@ init.defaultbranch=master
 ```
 ```
 7-3. 프로그램 실행 결과 스크린샷(퀴즈 추가, 목록, 풀기 및 점수)
-
+```
+```
 PS C:\Users\lucidts1102\mission2> python quizgame.py
 * quizgame.py프로그램실행중 ctrl+C로 빠져나올경우
 ==============================
@@ -122,12 +123,15 @@ PS C:\Users\lucidts1102\mission2> python quizgame.py
 4. 점수 확인
 5. 종료
 ==============================
-메뉴 선택: 
-
+메뉴 선택:
+```
+```
+*ctrl+C로 강제 중단후 메시지
 ⚠️ 사용자 중단(Ctrl+C/EOF)이 감지되었습니다.
 현재까지의 데이터를 안전하게 저장하고 종료합니다...
 PS C:\Users\lucidts1102\mission2> 
-
+```
+```
 * 퀴즈 목록 조회
 ==============================
      파이썬 퀴즈 게임
@@ -173,23 +177,9 @@ PS C:\Users\lucidts1102\mission2>
 정답: 4번
 
 ✅ 총 5개의 퀴즈가 조회되었습니다.
-
+```
+```
 * 퀴즈 추가
-PS C:\Users\lucidts1102\mission2> python quizgame.py
-
-==============================
-     파이썬 퀴즈 게임
-==============================
-1. 퀴즈 풀기
-2. 퀴즈 등록
-3. 퀴즈 목록
-4. 점수 확인
-5. 종료
-==============================
-메뉴 선택: 
-
-⚠️ 사용자 중단(Ctrl+C/EOF)이 감지되었습니다.
-현재까지의 데이터를 안전하게 저장하고 종료합니다...
 PS C:\Users\lucidts1102\mission2> python quizgame.py
 
 ==============================
@@ -213,7 +203,8 @@ PS C:\Users\lucidts1102\mission2> python quizgame.py
 정답 번호를 입력하세요 (1-4): 3
 
 ✅ 퀴즈가 성공적으로 등록되고 파일에 저장되었습니다!
-
+```
+```
 * 퀴즈 풀기 및 점수 확인
 ==============================
      파이썬 퀴즈 게임
@@ -294,22 +285,19 @@ PS C:\Users\lucidts1102\mission2> python quizgame.py
 
 🎮 게임 종료! 당신의 점수는 70점입니다.
 🎊 축하합니다! 최고 기록을 경신했습니다! (50 -> 70)
+```
 
 ```
-4. git log --oneline --graph 결과를 스크린샷
+7-4. git log --oneline --graph 결과를 스크린샷
+
+PS C:\Users\lucidts1102\mission2> git log
+commit ef6acda0db02943839d37c9138b7058c1cbc2f38 (HEAD -> master)
+Author: unknown <lucidts1102@gnia.kr>
+Date:   Sun Nov 15 19:00:04 2026 +0900
+```
 
 ```
-```
-프로젝트 개요
-퀴즈 주제 선정이유
-실행방법 (예 python main.py)
-기능 목록(퀴즈 풀기/ 추가/ 목록/점수)
-파일 구조
-데이터 파일 설명(state.json 경로/역할/필드구조/스키마 등)
-의 항목을 포함하여 작성후 Git 최종 push한다.
-```
-```
-< git clon으로 Github에서 만든 포로젝트 내 컴퓨터로 가져오기 결과 >
+7-5. git clon으로 Github에서 만든 포로젝트 내 컴퓨터로 가져오기 결과
 PS C:\Users\lucidts1102\mission2> git clone https://github.com/taesukpark/mission-quizgame.git
 Cloning into 'mission-quizgame'...
 remote: Enumerating objects: 4, done.
@@ -319,3 +307,186 @@ remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 Receiving objects: 100% (4/4), done.
 ```
 
+## 8. git commit 10회 이상 하기(커밋 메시지에 변경 요약 포함)
+
+```
+8-1. 메뉴기능 완성 후 git commit 실행하기
+PS C:\Users\lucidts1102\mission2> git commit -m "퀴즈 메뉴 구성 완성"
+[master (root-commit) ef6acda] 퀴즈 메뉴 구성 완성
+ Committer: unknown <lucidts1102@gnia.kr>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 53 insertions(+)
+ create mode 100644 quizgame.py
+PS C:\Users\lucidts1102\mission2> git config --global user.name "taesukpark" 
+PS C:\Users\lucidts1102\mission2> git config --global user.email "lucidts@hanmail.net"
+PS C:\Users\lucidts1102\mission2> git log
+commit ef6acda0db02943839d37c9138b7058c1cbc2f38 (HEAD -> master)
+Author: unknown <lucidts1102@gnia.kr>
+Date:   Sun Nov 15 19:00:04 2026 +0900
+
+    퀴즈 메뉴 구성 완성
+```
+```
+8-2. Quiz 클래스 작성후 커밋한다.
+PS C:\Users\lucidts1102\mission2> git commit -m "Quiz 클래스 작성"    
+[master 8c7ccc8] Quiz 클래스 작성
+ 2 files changed, 1 insertion(+)
+ create mode 160000 mission-quizgame
+ create mode 100644 "\354\212\244\355\201\254\353\246\260 \354\203\267/GitHub\355\231\224\353\251\264/new_repository.png"
+
+PS C:\Users\lucidts1102\mission2> git commit -m "Quiz 클래스 재작성(인스턴 생성)"  
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   quizgame.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+```
+8-3. 기본 퀴즈 데이터 작성 후 커밋한다.
+PS C:\Users\lucidts1102\mission2> git commit -m "기본 퀴즈 데이터 작성"           
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   quizgame.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+```
+8-4. main 브랜치 이외의 추가 브랜치를 생성하고 퀴즈풀기 코딩작업한다.
+   git checkout -b 새브랜치명 : 새 브랜치 생성하면서 새브랜치로 이동
+PS C:\Users\lucidts1102\mission2> git checkout -b feature/quiz-play
+Switched to a new branch 'feature/quiz-play'
+PS C:\Users\lucidts1102\mission2> git branch
+* feature/quiz-play 현재 위치된 브랜치명에 *가 있음
+  master
+PS C:\Users\lucidts1102\mission2> git status
+On branch feature/quiz-play
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   quizgame.py 빨간색
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\lucidts1102\mission2> git add .
+PS C:\Users\lucidts1102\mission2> git status
+On branch feature/quiz-play 
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   quizgame.py 초록색
+PS C:\Users\lucidts1102\mission2> git commit -m "feature: 퀴즈 풀기 기능 구현 및 입력 예외 처리 추가"
+[master 0836e52] feature: 퀴즈 풀기 기능 구현 및 입력 예외 처리 추가
+ 1 file changed, 107 insertions(+), 8 deletions(-)
+```
+```
+8-5. 퀴즈풀기(브랜치 활용) 기능 완성후 커밋하고 master 브랜치로 병합
+   git checkout main : 해당 브랜치에서 빠져나와 master으로 이동
+PS C:\Users\lucidts1102\mission2> git checkout master
+M       quizgame.py
+Switched to branch 'master'
+
+   git merge 새브랜치명 : master에 새브랜치의 내용을 합치는 실행
+PS C:\Users\lucidts1102\mission2> git merge feature/quiz-play
+Already up to date.
+```
+```
+8-6. 퀴즈 추가 기능 완성후 commit한다. (예 Feat : 퀴즈 출제 기능 구현)
+PS C:\Users\lucidts1102\mission2> git commit -m "퀴즈 추가 출제기능 반영"                                                 
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "1. git commit 10\355\232\214 \354\235\264\354\203\201 \355\225\230\352\270\260(\354\273\244\353\260\213 \353\251\224\354\213\234\354\247\200\354\227\220 \353\263\200\352\262\275.txt"
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\lucidts1102\mission2> git branch
+  feature/quiz-play
+* master
+```
+```
+8-7. 퀴즈 목록 기능 완성 후 커밋한다.
+PS C:\Users\lucidts1102\mission2> git commit -m "퀴즈 목록 확인 기능 추가"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "1. git commit 10\355\232\214 \354\235\264\354\203\201 \355\225\230\352\270\260(\354\273\244\353\260\213 \353\251\224\354\213\234\354\247\200\354\227\220 \353\263\200\352\262\275.txt"
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+```
+8-8. 점수확인 기능 완성 후 커밋한다.(예 Fix : 점수 계산 오류 수정)
+PS C:\Users\lucidts1102\mission2> git commit -m "점수 확인 기능 추가"     
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "1. git commit 10\355\232\214 \354\235\264\354\203\201 \355\225\230\352\270\260(\354\273\244\353\260\213 \353\251\224\354\213\234\354\247\200\354\227\220 \353\263\200\352\262\275.txt"
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+```
+8-9. QuizGame 클래스 작성후 git commit (예 Refacto : QuizGame 책임분리)
+PS C:\Users\lucidts1102\mission2> git commit -m "클래스 구조 정리"   
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        "1. git commit 10\355\232\214 \354\235\264\354\203\201 \355\225\230\352\270\260(\354\273\244\353\260\213 \353\251\224\354\213\234\354\247\200\354\227\220 \353\263\200\352\262\275.txt"
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+```
+8-10. 파일 입출력 기능 완성 후 commit (퀴즈게임 프로젝트 코드가 GitHub에 업로드되어 있다.)
+PS C:\Users\lucidts1102\mission2> git commit -m "Python Quiz Game 완성"                              
+[master 2f80825] Python Quiz Game 완성
+ 3 files changed, 987 insertions(+), 19 deletions(-)
+ create mode 100644 "1. git commit 10\355\232\214 \354\235\264\354\203\201 \355\225\230\352\270\260(\354\273\244\353\260\213 \353\251\224\354\213\234\354\247\200\354\227\220 \353\263\200\352\262\275.txt"
+ create mode 100644 state.json
+PS C:\Users\lucidts1102\mission2> git log
+commit 2f80825bea33ab1ed6618562c2c06dcbbd5ac967 (HEAD -> master)
+Author: taesukpark <lucidts@hanmail.net>
+Date:   Mon Nov 16 04:38:36 2026 +0900
+
+    Python Quiz Game 완성
+```
+
+## 9. Git 저장소 복제 실습
+
+clone과 pull을 각각 1회 이상 사용한 기록이 있다.
+
+```
+9-1.git clone URL(GitHub 주소) 미션수행 저장소를 clone하여 별도의 로컬 디렉터리에 복제한다.
+
+복제된 저장소에서 간단한 변경(예:README.md에 한 줄 추가)을 하고 commit하고 push한다.
+PS C:\Users\lucidts1102\mission2> git push -u origin main
+info: please complete authentication in your browser...
+To https://github.com/taesukpark/mission-quizgame.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/taesukpark/mission-quizgame.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+```
+9-2. 기존 로컬 작업 디렉터리에서 pull로 변경사항을 가져온다.
+
+```
+
+```
+9-3. git pull 받은 내용이 정상적으로 반영되었는지 확인한다.
+
+```
