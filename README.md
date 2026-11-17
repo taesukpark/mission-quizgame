@@ -478,15 +478,47 @@ Resolving deltas: 100% (6/6), done.
 ```
 ```
 9-2. 복제된 저장소에서 간단한 변경(예:README.md에 한 줄 추가)을 하고 commit하고 push한다.
+PS C:\Users\lucidts1102\project\mission-quizgame> git add README.md
+PS C:\Users\lucidts1102\project\mission-quizgame> git status
+On branch main
+Your branch is up to date with 'origin/main'.
 
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md 초록색 글자
+
+PS C:\Users\lucidts1102\project\mission-quizgame> git commit -m "README.md에 한 줄 추가" README.md
+[main dbb3f5f] README.md에 한 줄 추가
+ 1 file changed, 1 insertion(+)
+PS C:\Users\lucidts1102\project\mission-quizgame> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 24 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 398 bytes | 398.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/taesukpark/mission-quizgame.git
+   4114b3f..dbb3f5f  main -> main
 ```
 ```
 9-3. 기존 로컬 작업 디렉터리에서 pull로 변경사항을 가져온다.
-
+PS C:\Users\lucidts1102\project\mission-quizgame> git pull origin main
+From https://github.com/taesukpark/mission-quizgame
+ * branch            main       -> FETCH_HEAD
+Already up to date.
 ```
 
 ```
 9-4. git pull 받은 내용이 정상적으로 반영되었는지 확인한다.
-
+PS C:\Users\lucidts1102\project\mission-quizgame> git log --oneline
+dbb3f5f (HEAD -> main, origin/main, origin/HEAD) README.md에 한 줄 추가
+4114b3f quizgame.py load
+b378785 clone 및 push 실습
+96a211e Update README.md
+4685a31 Update README.md
+7f1a59a Revise quiz topic selection and add execution steps
+50a3ef5 Update README.md
+737dc82 (origin/master) Add Quiz class and game logic to README
+27bdcc0 Update README with submission and setup information
 ```
-마지막 한줄
